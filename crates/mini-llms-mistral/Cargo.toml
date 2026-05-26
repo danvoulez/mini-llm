@@ -1,0 +1,13 @@
+[package]
+name = "mini-llms-mistral"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+reqwest.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+mini-llms-core = { path = "../mini-llms-core" }
+mini-llms-runtime = { path = "../mini-llms-runtime" }
+async-trait.workspace = true

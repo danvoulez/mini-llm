@@ -1,0 +1,2 @@
+- Follow docs in `codex/CODEX-GREENFIELD-PROMPT.md` and architecture docs as source of truth.
+- Keep `mini-llms.rs` naming.

@@ -1,0 +1,19 @@
+[package]
+name = "mini-llms-cli"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+clap.workspace = true
+tokio.workspace = true
+mini-llms-runtime = { path = "../mini-llms-runtime" }
+mini-llms-mistral = { path = "../mini-llms-mistral", optional = true }
+
+[features]
+default = []
+mistral = ["dep:mini-llms-mistral"]
+
+[[bin]]
+name = "mini-llms"
+path = "src/main.rs"
