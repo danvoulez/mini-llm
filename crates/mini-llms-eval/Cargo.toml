@@ -1,0 +1,6 @@
+[package]
+name = "mini-llms-eval"
+version.workspace = true
+edition.workspace = true
+[dependencies]
+mini-llms-core = { path = "../mini-llms-core" }

@@ -1,0 +1,30 @@
+[workspace]
+members = [
+  "crates/mini-llms-core",
+  "crates/mini-llms-runtime",
+  "crates/mini-llms-store",
+  "crates/mini-llms-mistral",
+  "crates/mini-llms-cli",
+  "crates/mini-llms-eval",
+  "crates/mini-llms-schemas",
+]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+license = "MIT"
+version = "0.1.0"
+
+[workspace.dependencies]
+anyhow = "1"
+async-trait = "0.1"
+chrono = { version = "0.4", features=["serde"] }
+clap = { version = "4", features=["derive"] }
+serde = { version = "1", features=["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+thiserror = "2"
+tokio = { version = "1", features=["macros","rt-multi-thread"] }
+uuid = { version = "1", features=["v4","serde"] }
+sqlx = { version = "0.8", default-features = false, features=["runtime-tokio-rustls","postgres","uuid","chrono","json"] }
+reqwest = { version = "0.12", default-features=false, features=["json","rustls-tls"] }

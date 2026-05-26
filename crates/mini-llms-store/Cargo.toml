@@ -1,0 +1,12 @@
+[package]
+name = "mini-llms-store"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+async-trait.workspace = true
+serde_json.workspace = true
+sqlx.workspace = true
+uuid.workspace = true
+mini-llms-core = { path = "../mini-llms-core" }
